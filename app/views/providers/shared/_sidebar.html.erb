@@ -1,0 +1,94 @@
+<div class="col-5">
+    <%= render 'providers/shared/info' %>
+
+    <div class="profile-details">
+        <div id="tab-panel" class="tab-panel mt-5">
+            <nav>
+                <ul class="tab-panel__nav">
+                    <li data-tab="description" class="tab-panel__nav--link tab-panel__nav--link--current"><a href="javascript:;">Description</a></li>
+                    <li data-tab="reviews" class="tab-panel__nav--link"><a href="javascript:;">Reviews &amp; Ratings</a></li>
+                    <li data-tab="comments" class="tab-panel__nav--link"><a href="javascript:;">Comments</a></li>
+                </ul>
+            </nav>
+
+            <div class="tab-panel__content content-wrap">
+                <section class="tab-panel__pane tab-panel__current" id="description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                </section>
+
+                <section class="tab-panel__pane" id="reviews">
+                    <div class="tab-panel__header d-flex justify-content-between mb-3">
+                        <!-- <p></p>
+                        <a href="#review-form" class="button">Write a Review</a> -->
+                    </div>
+                    <ul class="list-unstyled mb-3">
+                        <% 4.times do |i| %>
+                            <li class="media my-4">
+                              <%= link_to(image_tag("avatar.png" ,width: '64px' ,height: '64px', alt: 'Generic placeholder image', class: 'd-flex mr-3'), 'javascript:;', data: { turbolinks: true }) %>
+                              <div class="media-body">
+                                <h5 class="mt-0 mb-1">List-based media object</h5>
+                                <div class="company__ratings" data-rating="<%= i %>"></div>
+                                    Cras sit amet nibh libero, in gravida nulla. 
+                                    Nulla vel metus scelerisque ante sollicitudin.
+                              </div>
+                            </li>
+                        <% end %>
+                    </ul>
+                    <hr>
+                    <a name="review-form"></a>
+                    <% if user_signed_in? %>
+                        <form id="">
+                            <div class="d-flex mb-1 justify-content-between">
+                                <p>Rate: </p>
+                                <div class="user__ratings"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="body" id="review" class="form-control" rows="4" placeholder="Add a review"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="button" type="submit">Add your Review</button>
+                            </div>
+                        </form>
+                    <% else %>
+                        <div>
+                            <p class="mb-3">You need to sign in before submitting a review</p>
+                            <%= link_to("Login here", new_user_session_path, class: 'button button--primary', data: { turbolinks: true }) %>
+                        </div>
+                    <% end %>
+                </section>
+                
+                <section class="tab-panel__pane" id="comments">
+                    <ul class="list-unstyled">
+                      <% 4.times do %>
+                            <li class="media my-4">
+                              <%= link_to(image_tag("avatar.png" ,width: '64px' ,height: '64px', alt: 'Generic placeholder image', class: 'd-flex mr-3'), 'javascript:;') %>
+                              <div class="media-body">
+                                <h5 class="mt-0 mb-1">User Full Name</h5>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                              </div>
+                            </li>
+                        <% end %>
+                    </ul>
+
+                    <hr>
+                    <% if user_signed_in? %>
+                        <form method="post" action="#">
+                            <div class="form-group">
+                                <textarea rows="4" class="form-control" name="body" id="comment" placeholder="Add comment here..."></textarea>
+                            </div>
+                            <button class="button" type="submit">Add Comment</button>
+                        </form>
+                    <% else %>
+                        <div>
+                            <p class="mb-3">You need to sign in before leaving a comment</p>
+                            <%= link_to("Login here", new_user_session_path, class: 'button button--primary', data: { turbolinks: true }) %>
+                        </div>
+                    <% end %>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

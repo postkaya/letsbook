@@ -1,0 +1,41 @@
+<% provide(:title, "Social media") %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 ml-auto">
+      <div class="">
+        <div class="header">
+          <h2 class="header__title">Social Media</h2>
+          <h4 class="header__sub-title">
+        Social media subtitle.</a>.
+        </h4>
+      </div>
+      <div class="row">
+        <div class="col">
+          <form method="post" action="payment.html">
+            
+            <div class="d-flex justify-content-between align-items-center">
+              <button type="submit" class="button button--primary">
+                Submit
+                <%= open_iconic 'icon ic-white', :account_login %>
+              </button>
+              <%= link_to("Skip for now", pages_payment_path, data: { turbolinks: true }) %>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="pager">
+      <ul class="dotnav d-flex">
+        <li class="dotnav__dot dotnav__dot--complete"><a data-toggle="tooltip" title="Business Profile" href="#">1</a></li>
+        <li class="dotnav__dot dotnav__dot--complete"><a data-toggle="tooltip" title="Add Images & Media" href="#">2</a></li>
+        <li class="dotnav__dot dotnav__dot--active"><a data-toggle="tooltip" title="Social Media" href="#">3</a></li>
+        <li class="dotnav__dot "><a data-toggle="tooltip" title="Payment Information" href="#">4</a></li>
+        <li class="dotnav__dot "><a data-toggle="tooltip" title="Working Hours" href="#">5</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>

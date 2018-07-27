@@ -1,0 +1,16 @@
+<div class="gallery__wrapper mt-3">
+  <div class="scrollbar">
+    <div class="handle"></div>
+  </div>
+
+  <div class="gallery d-flex frame">
+    <ul class="gallery__items d-flex slidee">
+      <%= content_tag(:li, link_to(image_tag("pp.jpg" ,width: '90px' ,height: '90px'), 'javascript:;'), class: 'gallery__item', data: { src: "/assets/images/pp.jpg" }) %>
+      <% 5.times do |i| %>
+        <%= content_tag(:li, link_to(image_tag("upload-default.png" ,width: '90px' ,height: '90px'), 'javascript:;'), class: 'gallery__item', data: { src: "/assets/images/#{i+1}.jpg" }) %>
+      <% end %>
+    </ul>
+  </div>
+
+  <!-- <ul class="pages"></ul> -->
+</div>

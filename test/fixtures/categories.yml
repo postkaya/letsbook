@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Massages
+  slug: massages
+
+two:
+  name: Beauty
+  slug: beauty
+
+two:
+  name: Skin care
+  slug: skin-care

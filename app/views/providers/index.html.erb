@@ -1,0 +1,77 @@
+<% provide(:title, "Services close to you...") %>
+
+<div class="d-flex">
+    <!-- Map Area -->
+    <div class="col-md-8 d-md-block d-none pl-0">
+        <div class="map__wrapper">
+            <div id="map__container"></div>
+        </div>
+    </div>
+    <!-- ./End Map Area -->
+
+    <div class="col-xs-12 col pl-0 c-offcanvas-content-wrap">
+        <div class="company__box__wrapper mb-5">
+            <div class="js-offcanvas" id="off-canvas">
+                <a class="js-offcanvas-close">
+                    <%= open_iconic 'icon icon-lg ic-grey', :x %>
+                </a>
+
+                <div class="company-box__filter-header">
+                    <h3>Filter header</h3>
+                </div>
+
+                <div class="company-box__filter-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            
+            <div class="company__box__stats mt-3">
+                <div class="company__box__stats mt-1 d-flex justify-content-between">
+                    <span>Your search returned <span><%= pluralize(@provider_count, 'provider') %></span></span>
+                    <a href="#off-canvas" data-offcanvas-trigger="off-canvas">Menu</a>
+                </div>
+                    <% unless params[:category].blank? || params[:location].blank? %>
+                    <span>You searched for <span class="font-weight-bold"><%= params[:category] %></span> in <span class="font-weight-bold"><%= params[:location] %></span></span>
+                <% end %>
+            </div>
+            
+            <div class="company__box__body mt-1">
+                <% if @providers.blank? %>
+                    <p>No providers</p>
+                <% else %>
+                    <% @providers.each do |provider| %>
+                        <div class="company__box d-flex">
+                            <div class="col-xs-3 company__avatar">
+                                <%= link_to(image_tag('default-placeholder.png', width: '90px', height: '90px'), '#', data: { turbolinks: true }) %>
+                            </div>
+                            
+                            <div class="col company__information d-flex flex-column justify-content-md-between">
+                                <h4 class="company__title">
+                                <%= link_to(provider.name, provider_path(provider), data: { turbolinks: true }) %>
+                                </h4>
+                                <p class="company__location"><%= full_location(provider) %></p>
+                                <div class="company__ratings" data-rating="<%= provider.id %>"></div>
+                                <div class="d-flex justify-content-between">
+                                    <small class="company__time">
+                                        <%= open_iconic 'ic-tiny', :clock %>
+                                        Time: Mon 8:00am - 5:00pm
+                                    </small>
+                                    <%= link_to(open_iconic(:icon, :map_marker), "javascript:;", data: { turbolinks: true }) %>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuCeG9eA-vVBi0U15KFWgbNBobtY73Pqw&callback=initMap">
+</script>

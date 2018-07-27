@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= javascript_include_tag :modernizr %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <%= render 'layouts/partials/navigation' %>
+    </nav>
+    <!-- ./Navigation ends here -->
+    
+    <!-- Flash Messages -->
+    <%= render 'layouts/partials/messages' %>
+    <!-- Container -->
+    <%= yield %>
+    <!-- ./Container ends here -->
+    <!-- <%= debug(params) if Rails.env.development? %> -->
+    <script src="/assets/js/sly.js"></script>
+  </body>
+</html>

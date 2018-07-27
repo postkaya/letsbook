@@ -1,0 +1,42 @@
+{
+  "name": "letsbook",
+  "author": "Joseph Akitoye",
+  "email": "josephakitoye@gmail.com",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samtoya/letsbook.git"
+  },
+  "dependencies": {
+    "@rails/webpacker": "^3.0.2",
+    "autocomplete.js": "^0.29.0",
+    "axios": "^0.16.2",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap-toggle": "^2.2.2",
+    "coffeescript": "1.12.7",
+    "google-maps": "^3.2.1",
+    "hideshowpassword": "^2.1.1",
+    "intl-tel-input": "^12.1.0",
+    "jquery": "^3.2.1",
+    "jquery-timepicker": "^1.3.3",
+    "js-offcanvas": "^1.2.0",
+    "lg-autoplay": "^1.0.4",
+    "lg-fullscreen": "^1.0.1",
+    "lg-hash": "^1.0.2",
+    "lg-pager": "^1.0.2",
+    "lg-share": "^1.1.0",
+    "lg-thumbnail": "^1.1.0",
+    "lg-video": "^1.1.0",
+    "lg-zoom": "^1.1.0",
+    "prop-types": "^15.6.0",
+    "raty-js": "^2.7.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-summernote": "^2.0.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.9.1"
+  }
+}

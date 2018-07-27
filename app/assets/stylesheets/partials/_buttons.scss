@@ -1,0 +1,82 @@
+/*
+*   Filename: _buttons.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "colors";
+@import "variables";
+@import "typography";
+
+.button {
+  padding: .7rem .9rem;
+  // font-size: .95rem;
+  outline: none;
+  border: none;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: $base-font-family;
+  border-radius: 4px;
+  transition: background-color .2s ease;
+  &:hover, &:active {
+    background-color: $primary-color;
+    color: $white;
+    text-decoration: none;
+  }
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+.button--default {
+  background-color: $header-color;
+  color: #ffffff;
+}
+
+.button--default_active {
+  background-color: $primary-color;
+  color: #ffffff;
+}
+
+.button--primary {
+  background: {
+    color: $base-color;
+  }
+  color: $white;
+}
+
+.button--round {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+/* Social media buttons */
+.social {
+  display: block;
+  text-align: center;
+  padding: .45rem 0;
+  border: thin solid #e8e8e8;
+  font-size: .9rem;
+}
+
+.social__facebook {
+  border-color: $facebook;
+  color: $facebook;
+  &:hover {
+    background-color: $facebook;
+    color: $white;
+  }
+}
+
+.social__google {
+  color: $google;
+  border-color: $google;
+  &:hover {
+    background-color: $google;
+    color: $white;
+  }
+}

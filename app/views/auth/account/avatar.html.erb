@@ -1,0 +1,22 @@
+<% provide(:title, current_user.fullname) %>
+
+<div class="d-flex">
+  <%= render 'auth/shared/widget' %>
+
+  <div class="form-registration-wrapper col-5">
+    <!-- <div class="info sticky-message">
+      <%= open_iconic 'icon ic-white', :info %>
+      Your profile is incomplete, please finish to start receiving bookings.
+    </div> -->
+    <div class="form-registration-wrapper__body">
+      <%= simple_form_for(@user, url: auth_account_avatar_path) do |f| %>
+        <%= f.input :avatar, as: :file, input_html: { class: 'form-control' } %>
+        <%= f.button :submit, "Upload" %>
+      <% end %>
+    </div>
+     
+    <div class="form-registration-wrapper__footer">
+    </div>
+  </div>
+</div>
+</div>

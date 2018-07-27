@@ -1,0 +1,26 @@
+<% provide(:title, "Resend confirmation instructions") %>
+
+<div class="wrapper">
+  <div class="form-login-wrapper">
+    <div class="form-wrapper__header">
+      <h2 class="text-center">letsbook</h2>
+      <p class="text-center">Seems the instructions to confirm your new account was lost in transmission, not to worry, give us your email and we'll resend it now.</p>
+      <!-- <%= render 'devise/shared/links' %> -->
+    </div>
+    
+    <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= f.full_error :confirmation_token %>
+      <div class="form-wrapper__body">
+        <%= f.input :email, required: true, autofocus: true %>
+      </div>
+      <div class="form-wrapper__footer">
+        <%= f.button :submit, "Resend confirmation instructions" %>
+        <!-- <button type="submit" class="button button--primary">
+          Resend confirmation
+          <%= open_iconic 'icon ic-white', :account_login %>
+        </button> -->
+      </div>
+    <% end %>
+      <!-- <p class="text-center mt-3">Need an account? Get one <%= link_to("here", new_user_registration_path) %></p> -->
+  </div>
+</div>

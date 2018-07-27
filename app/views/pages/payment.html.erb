@@ -1,0 +1,95 @@
+<% provide(:title, "Payment setup..") %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 ml-auto">
+      <div class="">
+        <div class="header">
+          <h2 class="header__title">Setup Shop - Almost there...</h2>
+          <h4 class="header__sub-title">
+        Let's get yuor payment sorted out. We just need some information about your establishment. We need you to provide one for now, you can add more once your profile is created.</a>.
+        </h4>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col-xs-12 col-md-3">
+              <a href="javascript:;" class="button button--default button--default_active">Mobile Money</a>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <a href="javascript:;" class="button button--default">PoS</a>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <a href="javascript:;" class="button button--default">Bank deposit</a>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <a href="javascript:;" class="button button--default">Pay after service</a>
+            </div>
+          </div>
+          <hr>
+          <div class="main__payment">
+            <div class="mobile__money">
+              <p class="text-center main__payment--note">Please note: Mobile provider charges may apply. Check with your various operators for transfer charges.</p>
+              <div class="tab">
+                <div class="tab__header">
+                  <ul class="tab__header--links d-flex mt-4">
+                    <li class="ml-auto m-3">
+                      <%= link_to(image_tag('', alt: 'MTN', width: '64px', height: '64px'), "#") %>
+                    </li>
+                    <li class="mr-3">
+                      <%= link_to(image_tag('vodafone-cash.png', alt: 'MTN', width: '64px', height: '64px'), "#") %>
+                    </li>
+                    <li class="mr-3">
+                      <%= link_to(image_tag('airtel-money.png', alt: 'MTN', width: '64px', height: '64px'), "#") %>
+                    </li>
+                    <li class="mr-auto">
+                      <%= link_to(image_tag('tigo-cash.png', alt: 'MTN', width: '64px', height: '64px'), "#") %>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab__body">
+                  <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                      <form method="post" action="">
+                        <div class="form-group">
+                          <label for="account_name">Account Name</label>
+                          <input type="text" name="account_name" id="account_name" class="form-control">
+                          <small id="emailHelp" class="form-text text-muted">This information would be kept from end-users.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="phone_number">Phone Number</label>
+                          <input type="tel" name="phone" id="phone" class="form-control">
+                          <small id="emailHelp" class="form-text text-muted">Mobile number you want to receive payments with.</small>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <button type="submit" class="button button--primary">
+                            Continue
+                            <%= open_iconic 'icon ic-white', :account_login %>
+                          </button>
+                          <%= link_to("Skip for now", pages_finish_path, data: { turbolinks: true }) %>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="pager">
+      <ul class="dotnav d-flex">
+        <li class="dotnav__dot dotnav__dot--complete"><a data-toggle="tooltip" title="Business Profile" href="#">1</a></li>
+        <li class="dotnav__dot dotnav__dot--complete"><a data-toggle="tooltip" title="Add Images & Media" href="#">2</a></li>
+        <li class="dotnav__dot dotnav__dot--complete"><a data-toggle="tooltip" title="Social Media" href="#">3</a></li>
+        <li class="dotnav__dot dotnav__dot--active"><a data-toggle="tooltip" title="Payment Information" href="#">4</a></li>
+        <li class="dotnav__dot "><a data-toggle="tooltip" title="Working Hours" href="#">5</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>

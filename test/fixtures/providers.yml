@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  subscription_id: 1
+  provider_type_id: 1
+  name: Food Inc.
+  website: http://www.foodinc.com
+  address: 15 Deedaw Lane, Madina
+  country: Ghana
+  state: Greater Accra
+  city: Osu
+
+two:
+  user_id: 2
+  subscription_id: 2
+  provider_type_id: 2
+  name: Massage Palace
+  website: http://www.massagepalace.com
+  address: P.O. Box 1503 Deedaw Lane, Madina
+  country: Nigeria
+  state: Abuja
+  city: Wuse

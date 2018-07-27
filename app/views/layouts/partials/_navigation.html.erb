@@ -1,0 +1,70 @@
+<nav class="navbar fixed-top navbar-expand-lg justify-content-between">
+  <%= link_to("letsbook", root_path, class: 'navbar-brand', data: { turbolinks: true }) %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+  data-target="#main__menu" aria-controls="main__menu"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main__menu">
+    <ul class="navbar-nav ml-auto">
+      <% if user_signed_in? %>
+      <li class="nav-item dropdown">
+        <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= open_iconic('icon ic-primary', :bell) %>
+          <span class="badge badge-danger">5</span>
+        </a>
+          <div class="dropdown-menu dropdown-menu-right notifications">
+          <div class="notifications__header d-flex justify-content-between">
+            <h5>Notifications</h5>
+            <a href="javascript:;" data-turbolinks="true">
+              View all
+              <%= open_iconic 'icon ic-primary', :arrow_right %>
+            </a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="notifications__body"></div>
+          <div class="notifications__footer"></div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="javascript:;" class="nav-link">
+          <%= open_iconic('icon ic-primary', :envelope_closed) %>
+          <span class="badge badge-danger">50</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown d-flex align-items-baseline">
+        <a class="nav-link dropdown-toggle" href="javascript:;" id="menu-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= image_tag(current_user.avatar.url, width: '22px', height: '22px', class: 'avatar rounded-circle') %>
+          <span>Hi, <%= current_user.last_name %></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <% unless current_user.provider.blank? %>
+            <% if current_user.provider.count > 1 %>
+              <%= link_to("View all providers", '#', class: 'dropdown-item', data: { turbolinks: true }) %>
+            <% end %>
+          <% end %>
+          
+          <% if current_user.provider.blank? %>
+            <%= link_to("Become a provider", new_provider_path, class: 'dropdown-item', data: { turbolinks: true }) %>
+          <% else %>
+            <%= link_to("View Provider", provider_path(current_user.provider.first.slug), class: 'dropdown-item', data: { turbolinks: true }) %>
+          <% end %>
+          <%= link_to("Edit Account", edit_user_registration_path, class: 'dropdown-item', data: { turbolinks: true }) %>
+          <div class="dropdown-divider"></div>
+          <%= link_to("Logout", destroy_user_session_path, method: :DELETE, class: 'dropdown-item', data: { turbolinks: true }) %>
+        </div>
+      </li>
+      <!-- <li class="nav-item">
+        <%= link_to(image_tag('avatar.png', width: '28px', height: '28px', class: 'avatar'), edit_user_registration_path, alt: 'Company Profile Picture') %>
+      </li> -->
+      <% else %>
+      <li class="nav-item">
+        <%= link_to("Login", new_user_session_path, class: 'nav-link', data: { turbolinks: true }) %>
+      </li>
+      <li class="nav-item">
+        <%= link_to('Register', new_user_registration_path, class: 'nav-link', data: { turbolinks: true }) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>

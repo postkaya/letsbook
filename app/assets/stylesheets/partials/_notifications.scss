@@ -1,0 +1,77 @@
+/*
+*   Filename: _notifications.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "typography";
+
+.message {
+  position: absolute;
+  z-index: 1031;
+  top: -6px;
+  left: 0;
+  right: 0;
+  background: #fde073;
+  text-align: center;
+  line-height: 4;
+  overflow: hidden;
+  padding: 2px 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 5px black;
+  -moz-box-shadow:    0 0 5px black;
+  box-shadow:         0 0 5px black;
+}
+
+@-webkit-keyframes slideDown {
+    0%, 100% { -webkit-transform: translateY(-70px); }
+    10%, 90% { -webkit-transform: translateY(0px); }
+}
+@-moz-keyframes slideDown {
+    0%, 100% { -moz-transform: translateY(-70px); }
+    10%, 90% { -moz-transform: translateY(0px); }
+}
+
+.cssanimations.csstransforms .message {
+    -webkit-transform: translateY(-70px);
+    -webkit-animation: slideDown 2.5s 1.0s 1 ease forwards;
+    -moz-transform:    translateY(-70px);
+    -moz-animation:    slideDown 2.5s 1.0s 1 ease forwards;
+}
+
+.info {
+   background-color: #4ea5cd;
+   border-color: #3b8eb5;
+   color: $white;
+}
+
+.error {
+   background-color: #de4343;
+   border-color: #c43d3d;
+   color: $white;
+}
+     
+.warning {
+   background-color: #eaaf51;
+   border-color: #d99a36;
+   color: $white;
+}
+
+.success {
+   background-color: #61b832;
+   border-color: #55a12c;
+   color: $white;
+}
+
+.sticky-message {
+  text-align: center;
+  padding: .7rem;
+  margin-bottom: .3rem;
+  // padding: 2px 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 2px $shadow-color;
+  -moz-box-shadow:    0 0 2px $shadow-color;
+  box-shadow:         0 0 2px $shadow-color;
+}

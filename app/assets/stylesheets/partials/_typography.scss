@@ -1,0 +1,31 @@
+/*
+*   Filename: _typography.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+// @import url('https://fonts.googleapis.com/css?family=Exo+2:300,400|Merriweather:300,400|Roboto+Condensed:300,400');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import "colors";
+
+$light: 100;
+$regular: 400;
+$bold: 800;
+
+$header-font-size: 1.2rem;
+
+// $base-font-family: 'Merriweather', sans-serif;
+// $base-font-family: 'Exo 2', sans-serif;
+$base-font-family: 'Open Sans', sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 1rem;
+$base-line-height: 1.5;
+$sub-title-font-size: .9rem;
+$header-font-height: $base-line-height;
+
+$logo-font: 'Miriam Libre';
+$logo-font-size: 1.3rem;
+$logo-font-color: $white;
+$logo-bg: #252631;

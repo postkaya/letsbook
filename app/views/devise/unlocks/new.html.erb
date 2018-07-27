@@ -1,0 +1,26 @@
+<% provide(:title, "Resend Unclock instructions") %>
+
+<div class="wrapper">
+  <div class="form-login-wrapper">
+    <div class="form-wrapper__header">
+      <h2 class="text-center">letsbook</h2>
+      <p class="text-center">Seems the instructions to unlock your account was lost on the way, not to worry, give us your email and we'll resend it now.</p>
+      <!-- <%= render 'devise/shared/links' %> -->
+    </div>
+    
+    <%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+      <%= f.full_error :unlock_token %>
+      <div class="form-wrapper__body">
+        <%= f.input :email, required: true, autofocus: true %>
+      </div>
+      <div class="form-wrapper__footer">
+        <!-- <%= f.button :submit, "Resend unlock instructions" %> -->
+        <button type="submit" class="">
+          Resend unlock instructions
+          <%= open_iconic 'icon ic-white', :account_login %>
+        </button>
+      </div>
+    <% end %>
+      <!-- <p class="text-center mt-3">Need an account? Get one <%= link_to("here", new_user_registration_path) %></p> -->
+  </div>
+</div>

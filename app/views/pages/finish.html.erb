@@ -1,0 +1,146 @@
+<% provide(:title, "Working hours") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 ml-auto">
+            <div class="">
+                <div class="header">
+                    <h2 class="header__title">Final Step</h2>
+                    <h4 class="header__sub-title">
+                        Give us more information about your work and the services you render. Tell us when you are available so your potential clients can book with you.</a>
+                    </h4>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <form action="" method="post">
+                            <div class="day__wrapper d-flex flex-column">
+                                <div class="day__wrapper--day day__wrapper--day--active d-flex align-items-center justify-content-center mb-1 p-2">
+                                    <div class="day__wrapper--day-input mr-auto">
+                                        <label for="monday">
+                                            <input type="checkbox" name="day" id="monday" value="day[monday]">
+                                            Monday
+                                        </label>
+                                    </div>
+
+                                    <div class="day__wrapper--day-time d-flex justify-content-between">
+                                        <input type="text" name="hours[open]" id="time_from" 
+                                                class="form-control timepicker text-center mr-2">
+                                        <input type="text" name="hours[close]" id="time_to"
+                                                class="form-control timepicker text-center">
+                                    </div>
+                                </div>
+                                <div class="day__wrapper--day d-flex align-items-center justify-content-between mb-1 p-2">
+                                    <div class="day__wrapper--day-input">
+                                        <input type="checkbox" name="day" id="tuesday" value="day[tuesday]">
+                                        <label for="tuesday">Tuesday</label>
+                                    </div>
+                                    <div class="day__wrapper--day-time d-flex align-items-center justify-content-between">
+                                        <input type="text" name="hours[open]" id="time_from" disabled 
+                                                class="form-control timepicker text-center mr-2">
+                                        <input type="text" name="hours[close]" id="time_to" disabled 
+                                                class="form-control timepicker text-center">
+                                    </div>
+                                </div>
+                                <div class="day__wrapper--day d-flex align-items-center justify-content-between mb-1 p-2">
+                                    <div class="day__wrapper--day-input">
+                                        <input type="checkbox" name="day" id="wednesday" value="day[wednesday]">
+                                        <label for="wednesday">Wednesday</label>
+                                    </div>
+                                    <div class="day__wrapper--day-time d-flex align-items-center justify-content-between">
+                                        <input type="text" name="hours[open]" id="time_from" disabled
+                                                class="form-control timepicker text-center mr-2">
+                                        <input type="text" name="hours[close]" id="time_to" disabled
+                                                class="form-control timepicker text-center">
+                                    </div>
+                                </div>
+
+                                <div class="day__wrapper--day d-flex align-items-center justify-content-between mb-1 p-2">
+                                    <div class="day__wrapper--day-input">
+                                        <input type="checkbox" name="day" id="thursday" value="day[thursday]">
+                                        <label for="thursday">Thursday</label>
+                                    </div>
+                                    <div class="day__wrapper--day-time d-flex align-items-center justify-content-between">
+                                        <input type="text" name="hours[open]" id="time_from" disabled 
+                                                class="form-control timepicker text-center mr-2">
+                                        <input type="text" name="hours[close]" id="time_to" disabled 
+                                                class="form-control timepicker text-center">
+                                    </div>
+                                </div>
+
+                                <div class="day__wrapper--day d-flex align-items-center justify-content-between mb-1 p-2">
+                                    <div class="day__wrapper--day-input">
+                                        <input type="checkbox" name="day" id="friday" value="day[friday]">
+                                        <label for="friday">Friday</label>
+                                    </div>
+                                    <div class="day__wrapper--day-time d-flex align-items-center justify-content-between">
+                                        <input type="text" name="hours[open]" id="time_from" disabled
+                                                class="form-control timepicker text-center mr-2">
+                                        <input type="text" name="hours[close]" id="time_to" disabled
+                                                class="form-control timepicker text-center">
+                                    </div>
+                                </div>
+                                
+                                <div class="day__wrapper--day d-flex align-items-center justify-content-between mb-1 p-2">
+                                    <div class="day__wrapper--day-input">
+                                        <input type="checkbox" name="day" id="saturday" value="day[saturday]">
+                                        <label for="saturday">Saturday</label>
+                                    </div>
+                                    <div class="day__wrapper--day-time d-flex align-items-center justify-content-between">
+                                        <input type="text" name="hours[open]" id="time_from" disabled
+                                                class="form-control timepicker text-center mr-2">
+                                        <input type="text" name="hours[close]" id="time_to" disabled
+                                                class="form-control timepicker text-center">
+                                    </div>
+                                </div>
+                                <div class="day__wrapper--day d-flex align-items-center justify-content-between mb-1 p-2">
+                                    <div class="day__wrapper--day-input">
+                                        <input type="checkbox" name="day" id="sunday" value="day[sunday]">
+                                        <label for="sunday">Sunday</label>
+                                    </div>
+                                    <div class="day__wrapper--day-time d-flex justify-content-between">
+                                        <input type="text" name="hours[open]" id="time_from" disabled
+                                                class="form-control timepicker text-center mr-2">
+                                        <input type="text" name="hours[close]" id="time_to" disabled
+                                                class="form-control timepicker text-center">
+                                    </div>
+                                </div>
+                                <div class="day__wrapper--day d-flex justify-content-between p-2">
+                                    <div class="day__wrapper--day-input">
+                                        <input type="checkbox" name="day" id="holidays" value="day[holidays]">
+                                        <label for="holidays">Holidays</label>
+                                    </div>
+                                    <div class="day__wrapper--day-time d-flex justify-content-between">
+                                        <input type="text" name="hours[open]" id="time_from" disabled
+                                                class="form-control timepicker text-center mr-2">
+                                        <input type="text" name="hours[close]" id="time_to" disabled
+                                                class="form-control timepicker text-center">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex mt-2 justify-content-between align-items-center">
+                                <button type="submit" class="button button--primary">
+                                Finish
+                                <%= open_iconic 'icon ic-white', :account_login %>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="pager">
+                <ul class="dotnav d-flex">
+                    <li class="dotnav__dot dotnav__dot--complete"><a data-toggle="tooltip" title="Business Profile" href="#">1</a></li>
+                    <li class="dotnav__dot dotnav__dot--complete"><a data-toggle="tooltip" title="Add Images & Media" href="#">2</a></li>
+                    <li class="dotnav__dot dotnav__dot--complete"><a data-toggle="tooltip" title="Social Media" href="#">3</a></li>
+                    <li class="dotnav__dot dotnav__dot--complete"><a data-toggle="tooltip" title="Payment Information" href="#">4</a></li>
+                    <li class="dotnav__dot dotnav__dot--active"><a data-toggle="tooltip" title="Working Hours" href="#">5</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

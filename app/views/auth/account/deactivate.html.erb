@@ -1,0 +1,22 @@
+<% provide(:title, 'Close my account') %>
+
+<div class="d-flex">
+  <%= render 'auth/shared/widget' %>
+
+  <div class="form-registration-wrapper col-5">
+    <div class="info sticky-message">
+      <%= open_iconic 'icon ic-white', :info %>
+      Your profile is incomplete, please finish to start receiving bookings.
+    </div>
+    <div class="form-registration-wrapper__header">
+      <h3>Cancel my account</h3>
+    </div>
+    <div class="form-registration-wrapper__body">
+       <p>Unhappy? <%= link_to "Cancel my account", registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    </div>
+     
+    <div class="form-registration-wrapper__footer">
+    </div>
+  </div>
+</div>
+</div>

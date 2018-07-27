@@ -1,0 +1,26 @@
+<% provide(:title, "Reset Your Password") %>
+
+<div class="wrapper">
+  <div class="form-login-wrapper">
+    <div class="form-wrapper__header">
+      <h2 class="text-center">letsbook</h2>
+      <p class="text-center">Don't worry, it happens all the time, provide us your valid email address &amp; we'll send you instructions on how to reset your password.</p>
+      <!-- <%= render 'devise/shared/links' %> -->
+    </div>
+    
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-wrapper__body">
+        <%= f.input :email, required: true, input_html: { class: ("is-invalid" if resource.errors[:email].any?) } %>
+      </div>
+      <div class="form-wrapper__footer">
+        <!-- <%= f.button :submit, "Reset Password" %> -->
+        <button type="submit" class="">
+          Reset Password
+          <%= open_iconic 'icon ic-white', :account_login %>
+        </button>
+      </div>
+    <% end %>
+      <p class="text-center mt-3">Need an account? Get one <%= link_to("here", new_user_registration_path) %></p>
+  </div>
+</div>

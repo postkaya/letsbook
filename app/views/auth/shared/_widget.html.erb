@@ -1,0 +1,115 @@
+<div class="widget widget__sidebar col-2">
+  <div class="widget-header"></div>
+  <div class="widget-content">
+    <ul class="">
+      <h6>User Settings</h6>
+      <li>
+        <a href="<%= edit_user_registration_path %>" data-turbolinks="true" class="<%= 'active' if params[:controller] == 'devise/registrations' && params[:action] == 'edit' %>">
+          <%= open_iconic 'icon ic-white', :person %>
+          User Profile
+        </a>
+      </li>
+      <% unless current_user.provider.exists? %>
+      <li>
+        <a href="<%= new_provider_path %>" data-turbolinks="true" class="">
+          <%= open_iconic 'icon ic-white', :person %>
+          Become a Provider
+        </a>
+      </li>
+      <% else %>
+      <li>
+        <a href="<%= new_provider_path %>">
+          <%= open_iconic 'icon ic-white', :person %>
+          Add More Providers
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <%= open_iconic 'icon ic-white', :eye %>
+        View Provider
+      </a>
+      </li>
+      <% end %>
+      <!-- <li>
+        <a href="<%= auth_account_avatar_path %>" data-turbolinks="true" class="<%= 'active' if params[:controller] == 'auth/account' && params[:action] == 'avatar' %>">
+          <%= open_iconic 'icon ic-white', :camera_slr %>
+          Change Avatar
+        </a>
+      </li> -->
+      <li>
+        <a href="<%= edit_user_registration_path %>" data-turbolinks="true" class="<%= 'active' if params[:controller] == 'auth/account' && params[:action] == 'avatar' %>">
+          <%= open_iconic 'icon ic-white', :lock_locked %>
+          Authentication
+        </a>
+      </li>
+      <li>
+        <a href="<%= auth_account_deactivate_path %>" data-turbolinks="true" class="<%= 'active' if params[:controller] == 'auth/account' && params[:action] == 'deactivate' %>">
+          <%= open_iconic 'icon ic-white', :power_standby %>
+          Deactivate Account
+        </a>
+      </li>
+      
+      <% unless current_user.provider.blank? %>
+      <hr>
+      <h6>Provider Settings</h6>
+      <li>
+        <a href="#" data-turbolinks="true">
+          <%= open_iconic 'icon ic-white', :thumb_up %>
+          Add Service
+        </a>
+      </li>
+      <li>
+        <a href="#" data-turbolinks="true">
+          <%= open_iconic 'icon ic-white', :dollar %>
+          Payments
+        </a>
+      </li>
+      <li>
+        <a href="#" data-turbolinks="true">
+          <%= open_iconic 'icon ic-white', :image %>
+          Gallery</a>
+      </li>
+      <li>
+        <a href="#" data-turbolinks="true" class="d-flex">
+          <%= open_iconic 'icon ic-white', :book %>
+          Bookings
+        </a>
+      </li> <li>
+        <a href="#" data-turbolinks="true">
+          <%= open_iconic 'icon ic-white', :shield %>
+          Security
+        </a>
+      </li>
+      <li>
+        <a href="#" data-turbolinks="true">
+          <%= open_iconic 'icon ic-white', :bullhorn %>
+          Marketing
+        </a>
+      </li>
+       <li>
+        <a href="#" data-turbolinks="true">
+          <%= open_iconic 'icon ic-white', :people %>
+          Provider Information
+        </a>
+      </li>
+      <li>
+        <a href="#" data-turbolinks="true">
+          <%= open_iconic 'icon ic-white', :bell %>
+          Notifications</a>
+      </li>
+      <li>
+        <a href="#" data-turbolinks="true">
+          <%= open_iconic 'icon ic-white', :comment_square %>
+          Text Messaging (SMS)
+        </a>
+      </li>
+      <li>
+        <a href="#" data-turbolinks="true">
+          <%= open_iconic 'icon ic-white', :envelope_closed %>
+          Need Assistance
+        </a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

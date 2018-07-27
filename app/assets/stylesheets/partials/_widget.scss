@@ -1,0 +1,46 @@
+/*
+*   Filename: _widget.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+.widget {
+  margin: 0;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 1px #ccc;
+}
+
+.widget__sidebar {
+}
+
+.widget-header {
+}
+
+.widget-content {
+  ul {
+    margin: 0;
+    padding: 0;
+    a {
+      padding: .6rem .5rem;
+      display: block;
+      width: 100%;
+      background: $primary-color;
+      margin-top: .060rem;
+      font-size: .75rem;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      color: #FFF;
+      transition: background-color .2s ease-in;
+      svg { margin-right: .5rem; }
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
+      &.active {
+        background-color: darken($primary-color, 5%);
+      }
+      }
+    }
+  }

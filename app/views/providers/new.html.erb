@@ -1,0 +1,94 @@
+<% provide(:title, "Setup profile") %>
+
+<%= render 'providers/shared/breadcrumb' %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 ml-auto mr-auto">
+            <div class="">
+                <div class="header">
+                    <h2 class="header__title">Setup Shop</h2>
+                    <h4 class="header__sub-title">
+                        The information provided here will be visible to all (site name) members on your profile page.</a>.
+                    </h4>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <%= simple_form_for @provider do |f| %>
+                             <div class="form-row">
+                                <%= f.association :provider_type, prompt: "Select a provider type", wrapper_html: { class: 'col-6' } %>
+                                <%= f.association :subscription, prompt: "Select a subscription", wrapper_html: { class: 'col-6' } %>
+                            </div>
+                            <%= f.input :name %>
+                            <%= f.input :description, as: :text, label: 'Description (Optional)' %>
+                            <%= f.input :website %>
+                            <%= f.input :address %>
+                            <div class="form-row">
+                                <%= f.input :country, as: :select, collection: ActionView::Helpers::FormOptionsHelper::COUNTRIES, wrapper_html: { class: 'col-4' }, prompt: "Select a country"  %>
+                                <%= f.input :state, wrapper_html: { class: 'col-4' } %>
+                                <%= f.input :city, wrapper_html: { class: 'col-4' } %>
+                            </div>
+                            <button type="submit">
+                                Next
+                                <%= open_iconic :icon, :arrow_right %>
+                            </button>
+                        <% end %>
+                        <!-- <form method="post" action="<%= pages_media_path %>">
+                            <div class="form-group">
+                                <label for="email">Company / Business Name</label>
+                                <input type="text" name="company" class="form-control" placeholder="Company / Business Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="basic-url">Website/Profile URL (If you don't have a website / business / entrepreneur)</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="url-addon">https://www.letsbook.com/</span>
+                                    <input type="text" class="form-control" id="company-url" aria-describedby="url-addon">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" name="phone" class="form-control" id="phone" placeholder="Phone Number">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" name="address" class="form-control" placeholder="Address">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label for="country">Country</label>
+                                    <input type="text" name="country" class="form-control" placeholder="Country">
+                                </div>
+
+                                <div class="form-group col">
+                                    <label for="region">State / Region</label>
+                                    <input type="text" name="region" class="form-control" placeholder="Address">
+                                </div>
+                            </div>
+                            <button type="submit" class="button button--primary">
+                                Submit
+                                <%= open_iconic "icon ic-white", :account_login %>
+                            </button>
+                        </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-md-3">
+            <div class="pager">
+                <ul class="dotnav d-flex">
+                    <li class="dotnav__dot dotnav__dot--active"><a data-toggle="tooltip" title="Business Profile" href="#">1</a></li>
+                    <li class="dotnav__dot"><a data-toggle="tooltip" title="Add Images & Media" href="#">2</a></li>
+                    <li class="dotnav__dot "><a data-toggle="tooltip" title="Social Media" href="#">3</a></li>
+                    <li class="dotnav__dot "><a data-toggle="tooltip" title="Payment Information" href="#">4</a></li>
+                    <li class="dotnav__dot "><a data-toggle="tooltip" title="Working Hours" href="#">5</a></li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+</div>

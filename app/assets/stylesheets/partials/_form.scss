@@ -1,0 +1,81 @@
+/*
+*   Filename: _form.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "colors";
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=url],
+input[type=password] {
+  // font-weight: 300;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background: #FFF !important;
+}
+
+.input-group-addon { background-color: $primary-color; color: $white }
+
+.form-control:focus {
+  border-color: none !important;
+}
+
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated .custom-select:invalid:focus, .custom-select.is-invalid:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.text-muted {
+  font-size: 85% !important;
+}
+
+.image-container {
+  position: relative;
+  .overlay {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ddd;
+    z-index: 2;
+    opacity: .7;
+    display: none;
+  }
+  .image-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+    a {
+      display: block;
+      margin-top: 3px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+
+.image-placeholder {
+  display: block;
+  width: 90px;
+  position: relative;
+  cursor: pointer;
+}
+
+.file-upload {
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  width: 90px;
+  display: block;
+  visibility: hidden;
+}

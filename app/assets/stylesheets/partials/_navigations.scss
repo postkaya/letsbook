@@ -1,0 +1,38 @@
+/*
+*   Filename: _navigations.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "colors";
+
+.avatar {
+  // vertical-align: text-top;
+  // margin-top: 2px;
+}
+
+.navbar {
+  background: $navigation-bg;
+  // background: $white;
+  padding: 0.2rem 1rem;
+  box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.08);
+  .navbar-item {
+    color: #FFF;
+    .navbar-link {
+    }
+  }
+}
+
+.dropdown-menu { font-size: 100%; }
+
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: $primary-color;
+  color: $white;
+}
+
+.notifications {
+  width: 350px !important;
+  padding: 1.2rem;
+}

@@ -1,0 +1,42 @@
+/*
+*   Filename: _sly.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "colors";
+
+.frame { width: 100%; padding: 0; }
+.frame .slidee { margin: 0; height: 100%; list-style: none; }
+.frame .slidee li { width: 90px; height: 100%; }
+
+.scrollbar { width: 100%; height: 2px; background-color: #ccc; line-height: 0; margin-bottom: .55rem; }
+.scrollbar .handle {
+  width: 100px; /* overriden if dynamicHandle: 1 */
+  height: 100%;
+  background: $primary-color;
+}
+
+.pages {
+  list-style: none;
+  margin: 5px 0;
+  padding: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 4px;
+    text-indent: -999px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
+    &.active {
+      background: #666;
+    }
+  }
+}

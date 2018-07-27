@@ -1,0 +1,25 @@
+/*
+*   Filename: _lightgallery.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "colors";
+
+.lg-backdrop,
+.lg-outer,
+.lg-outer #lg-dropdown-overlay {
+  top: 50.7333px;
+}
+
+#lightGallery-outer { top: 50.7333px; }
+
+.lg-outer .lg-thumb-outer {
+  bottom: 50.7333px;
+}
+
+.lg-progress-bar .lg-progress {
+  background-color: $primary-color;
+}

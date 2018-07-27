@@ -1,0 +1,40 @@
+<% provide(:title, "Welcome") %>
+
+<div class="wrapper">
+  <div class="row">
+    <div class="col">
+      <form action="/providers" method="get" accept-charset="utf-8">
+        <div class="search-form-wrapper">
+          <!-- <h3>Landing Page</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p> -->
+        </div>
+        
+        <div class="search-form-wrapper mt-2 d-flex justify-content-between ml-auto mr-auto">
+          <div class="search-form-wrapper__body d-flex justify-content-between">
+
+            <div class="category-search">
+              <input type="search" name="category" placeholder="What do you need?" id="category" autofocus />
+            </div>
+
+            <div class="location-search" style="position: relative;">
+              <a data-turbolinks="true" title="Get your current location"
+                 id="get_location" href="javascript:;" style="position: absolute;top:15px;right:10px;">
+                <small class="text-muted">
+                  <%= image_tag 'crosshair.svg', class: 'icon' %>
+                </small>
+              </a>
+              <input type="search" name="location" placeholder="Where are you?" id="location" />
+            </div>
+
+            <div class="search-button-wrapper">
+              <input type="submit" value="Locate" />
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

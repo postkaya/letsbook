@@ -1,0 +1,117 @@
+<% provide(:title, "Add media files") %>
+
+<%= render 'providers/shared/breadcrumb' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 ml-auto mr-auto">
+      <div class="">
+        <div class="header">
+          <h2 class="header__title">Add Gallery Images</h2>
+          <h4 class="header__sub-title">
+            Add images &amp; media subtitle.</a>
+          </h4>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <form action="" method="" accept-charset="utf-8" id="gallery" enctype="multipart/form-data">
+            <div class="d-flex justify-content-between">
+              <div class="image-container">
+                <div class="overlay"></div>
+                <div class="image-content hidden">
+                  <%= image_tag('pp.jpg', width: '90px', height: '90px') %>
+                  <a href="javascript:;">Change</a>
+                </div>
+                <label for="first_image" class="image-placeholder">
+                  <%= image_tag('upload-default.png', width: '90px', height: '90px') %>
+                  <input id="first_image" type="file" name="image-1" class="file-upload">
+                </label>
+              </div>
+              <label for="second_image" class="image-placeholder">
+                <%= image_tag('upload-default.png', width: '90px', height: '90px') %>
+                <input id="second_image" type="file" name="image-2" class="file-upload">
+              </label>
+              <label for="third_image" class="image-placeholder">
+                <%= image_tag('upload-default.png', width: '90px', height: '90px') %>
+                <input id="third_image" type="file" name="image-3" class="file-upload">
+              </label>
+              <label for="forth_image" class="image-placeholder">
+                <%= image_tag('upload-default.png', width: '90px', height: '90px') %>
+                <input id="forth_image" type="file" name="image-4" class="file-upload">
+              </label>
+              <label for="five_image" class="image-placeholder">
+                <%= image_tag('upload-default.png', width: '90px', height: '90px') %>
+                <input id="five_image" type="file" name="image-5" class="file-upload">
+              </label>
+              <label for="six_image" class="image-placeholder">
+                <%= image_tag('upload-default.png', width: '90px', height: '90px') %>
+                <input id="six_image" type="file" name="image-6" class="file-upload">
+              </label>
+            </div>
+          </form>
+
+          <!-- <form method="post" action="" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="file" id="gallery" class="form-control gallery">
+            </div>
+            
+            <div class="d-flex justify-content-between mt-3 align-items-center">
+              <button type="submit" class="">
+                Next <%= open_iconic 'icon', :arrow_right %>
+              </button>
+              <%= link_to("Skip for now", pages_social_path, data: { turbolinks: true }) %>
+            </div>
+          </form> -->
+        </div>
+      </div>
+
+      <div class="">
+        <div class="header">
+          <h2 class="header__title">Add Logo</h2>
+          <h4 class="header__sub-title">
+            Add your logo here.</a>
+          </h4>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <form action="" method="" accept-charset="utf-8">
+            <div class="d-flex justify-content-between">
+              <label for="logo" class="image-placeholder">
+                <%= image_tag('upload-default.png', width: '90px', height: '90px') %>
+                <input id="logo" type="file" name="logo" class="file-upload">
+              </label>
+            </div>
+          </form>
+
+          <!-- <form method="post" action="" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="file" id="gallery" class="form-control gallery">
+            </div>
+            
+            <div class="d-flex justify-content-between mt-3 align-items-center">
+              <button type="submit" class="">
+                Next <%= open_iconic 'icon', :arrow_right %>
+              </button>
+              <%= link_to("Skip for now", pages_social_path, data: { turbolinks: true }) %>
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="col-md-3">
+    <div class="pager">
+      <ul class="dotnav d-flex">
+        <li class="dotnav__dot dotnav__dot--completed"><a data-toggle="tooltip" title="Business Profile" href="#">1</a></li>
+        <li class="dotnav__dot dotnav__dot--active"><a data-toggle="tooltip" title="Add Images & Media" href="#">2</a></li>
+        <li class="dotnav__dot "><a data-toggle="tooltip" title="Social Media" href="#">3</a></li>
+        <li class="dotnav__dot "><a data-toggle="tooltip" title="Payment Information" href="#">4</a></li>
+        <li class="dotnav__dot "><a data-toggle="tooltip" title="Working Hours" href="#">5</a></li>
+      </ul>
+    </div>
+  </div> -->
+</div>
+</div>

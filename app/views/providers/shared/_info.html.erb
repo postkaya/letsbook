@@ -1,0 +1,53 @@
+<div class="profile-information mt-3">
+    <table class="table table-condensed table-sm table-responsive">
+        <tbody>
+            <tr>
+                <td>E-mail</td>
+                <td>
+                    <a href="mailto:company@domain.com">
+                        <%= open_iconic('icon ic-tiny', :envelope_closed) %>
+                         company@domain.com
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Telephone</td>
+                <td>
+                    <a href="tel:+233264388686">
+                        <%= open_iconic('icon ic-tiny', :phone) %>
+                        (+233)-264-388-686
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Working Hours</td>
+                <td>
+                    <ul>
+                        <li><%= open_iconic('icon ic-tiny', :clock) %> Monday - Friday 8:00am - 5:00pm</li>
+                        <li><%= open_iconic('icon ic-tiny', :clock) %> Weekends - Friday 8:00am - 3:00pm</li>
+                        <li><%= open_iconic('icon ic-tiny', :clock) %> Holidays - Friday 9:00am - 2:00pm</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>
+                    <address>
+                        <%= open_iconic('icon ic-tiny', :map) %> <%= location_with_address @provider %>
+                    </address>
+                </td>
+            </tr>
+            <% unless @provider.website.blank? %>
+                <tr>
+                    <td>Website</td>
+                    <td>
+                        <a href="<%= @provider.website %>" target="_blank" data-turbolinks="true">
+                            <%= open_iconic('icon ic-tiny', :globe) %>
+                            Visit Our Website
+                        </a>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>

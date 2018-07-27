@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+// Third-party libraries
+@import 'bootstrap';
+@import 'bootstrap-toggle/css/bootstrap-toggle.css';
+@import 'animate';
+@import 'lightgallery';
+@import 'js-offcanvas/src/js-offcanvas';
+@import 'summernote/dist/summernote-bs4.css';
+@import 'intl-tel-input/build/css/intlTelInput.css';
+@import 'jquery-timepicker/jquery.timepicker.css';
+
+// Globals
+@import "partials/globals";
+
+// Utilities
+@import "partials/colors";
+@import "partials/mixins";
+
+// Modules and variables
+@import "partials/accordoin";
+@import "partials/auth";
+@import "partials/base";
+@import "partials/breadcrumbs";
+@import "partials/buttons";
+@import "partials/calendar";
+@import "partials/figures";
+@import "partials/form";
+@import "partials/intinput";
+@import "partials/lightgallery";
+@import "partials/gallery";
+@import "partials/home";
+@import "partials/map";
+@import "partials/navigations";
+@import "partials/notifications";
+@import "partials/offcanvas";
+@import "partials/panels";
+@import "partials/payment";
+@import "partials/sly";
+@import "partials/tabs";
+@import "partials/timepicker";
+@import "partials/turbolinks";
+@import "partials/widget";

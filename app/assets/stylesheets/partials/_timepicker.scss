@@ -1,0 +1,18 @@
+/*
+*   Filename: _timepicker.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "colors";
+
+.ui-timepicker-standard {
+}
+
+.ui-state-hover {
+  background-color: $primary-color;
+  border-color: darken($primary-color, 10%);
+  color: $white !important;
+}

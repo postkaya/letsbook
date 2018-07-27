@@ -1,0 +1,88 @@
+/*
+*   Filename: _login.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "colors";
+@import "typography";
+
+/* Selections */
+
+::selection, ::-moz-selection {
+  color: #fff;
+  text-shadow: none;
+  background: #444;
+}
+
+/* Basics */
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login-wrapper {
+  width: 26em;
+  padding: 15px;
+}
+
+.form-wrapper__sub-header {
+  .social-login__button {
+    flex-basis: 49%;
+  }
+
+  .social-login {
+    // padding: .9rem 0px;
+  }
+}
+
+.form-wrapper__body {
+  border: thin solid $border-color;
+  padding: 10px 10px 15px;
+  background-color: #fff;
+}
+
+.form-wrapper__footer {
+  background-color: $primary-color;
+  padding: 2.2rem 10px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* Registration */
+.form-registration-wrapper {
+  width: 40em;
+  padding: 15px;
+}
+
+.form-registration-wrapper__header {}
+
+.form-registration-wrapper__body {
+  border: thin solid $border-color;
+  padding: 10px 10px 15px;
+  background-color: #fff;
+}
+
+.form-registration-wrapper__footer {
+  background-color: $primary-color;
+  padding: 2.2rem;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}

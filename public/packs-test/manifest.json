@@ -1,0 +1,10 @@
+{
+  "_/_/node_modules/react-summernote/dist/summernote.eot": "/packs-test/_/_/node_modules/react-summernote/dist/summernote-7e263200d01fb5998c401b03ef3e6433.eot",
+  "_/_/node_modules/react-summernote/dist/summernote.ttf": "/packs-test/_/_/node_modules/react-summernote/dist/summernote-549304631a5f1ab69498e294543086e3.ttf",
+  "_/_/node_modules/react-summernote/dist/summernote.woff": "/packs-test/_/_/node_modules/react-summernote/dist/summernote-03f45d882ff3a80b719cfc0789c5eab9.woff",
+  "application.js": "/packs-test/application-a00395c3f521a8c9dfc5.js",
+  "components/RichTextEditor.css": "/packs-test/components/RichTextEditor-c0b2ff3c1cc65294878ced69879606bf.css",
+  "components/RichTextEditor.js": "/packs-test/components/RichTextEditor-1fbf107a6c199a204d6e.js",
+  "components/SearchBar.js": "/packs-test/components/SearchBar-afc402f6d885bcc99ab6.js",
+  "hello_react.js": "/packs-test/hello_react-56eaef839a64946c4fde.js"
+}

@@ -1,0 +1,81 @@
+/*
+*   Filename: _globals.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "typography";
+
+* { font-weight: 400; }
+
+ul, li { margin: 0; padding: 0; }
+
+html {
+  height:100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // font: 13px/1 $base-font-family;
+  font: 80% $base-font-family;
+  // font-weight: 400;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+}
+
+a {
+  color: $primary-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+abbr[title], abbr[data-original-title] { color: $tertiary-color; }
+
+.ic-primary {
+  fill: $primary-color;
+}
+
+.ic-white {
+  fill: $white;
+}
+
+.ic-grey {
+  fill: #e8e8e8;
+}
+
+.ic-black {
+  fill: $black;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.icon-lg {
+  width: 22px;
+  height: 22px;
+}
+
+.ic-tiny {
+  width: 10px;
+  height: 10px;
+}
+
+.company__ratings {
+  img {
+    vertical-align: text-top;
+  }
+}
+
+.dropdown-menu {
+  top: 115%;
+  border-radius: 0;
+}

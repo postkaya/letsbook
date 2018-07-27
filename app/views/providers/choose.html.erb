@@ -1,0 +1,43 @@
+<% provide(:title, "Choose a service") %>
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-between">
+        <div class="col-md-6">
+            <%= render 'providers/shared/gallery' %>
+
+            <div class="service_wrapper">
+                <div class="service__header mt-3">
+                    <h2 class="header__title">Choose a service</h2>
+                    <!-- <h4 class="header__sub-title">
+                    Register with us, it takes less than a minute. If you already have an account <a
+                    href="signin.html">login here</a>.
+                    </h4> -->
+                </div>
+                <div class="service__body">
+                    <% @categories.each do |category| %>
+                        <div class="service__box d-flex flex-wrap mt-3">
+                            <h4 class="service__main__title"><%= category.name %></h4>
+                            <div class="service__items justify-content-between d-flex flex-wrap">
+                                <% category.service.each do |service| %>
+                                    <div class="service__item d-flex justify-content-between">
+                                        <div class="service__information col-md-8 p-0">
+                                            <h5 class="service__title"><a href="#" data-turbolinks="true"><%= service.name %></a></h5>
+                                            <div class="service__meta">
+                                                <small class="service__price mr-3">&cent;19 99</small>
+                                                <small class="service__time">1 hour 40 minutes</small>
+                                            </div>
+                                        </div>
+                                        <div class="service__actions col p-0">
+                                            <%= link_to("book now", calendar_providers_path, class: 'button', data: { turbolinks: true }) %>
+                                        </div>
+                                    </div>
+                                <% end %>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <%= render 'providers/shared/sidebar' %>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<!-- Breadcrumbs -->
+<div class='breadcrumbs'>
+  <div class='inner'>
+    <ul class='cf'>
+      <li>
+        <a class="<%= 'active' if params[:controller] == 'providers' && params[:action] == 'new' %>">
+          <span>1</span>
+          <span>Business Profile</span>
+        </a>
+      </li>
+      <li>
+        <a class="<%= 'active' if params[:controller] == 'working_hours' && params[:action] == 'new' %>">
+          <span>2</span>
+          <span>Working Hours</span>
+        </a>
+      </li>
+      <li>
+        <a class="<%= 'active' if params[:controller] == 'payments' && params[:action] == 'new' %>">
+          <span>3</span>
+          <span>Payment</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- ./End Breadcrumbs -->

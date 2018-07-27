@@ -1,0 +1,207 @@
+/*
+*   Filename: _base.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+@import "typography";
+
+/* ----- Register ----- */
+.header {
+  margin: 1.3rem 0;
+}
+
+.header__title {
+  font: {
+    size: 1.5rem;
+    weight: 500;
+  }
+  &::after {
+    content: " ";
+    display: block;
+    padding-top: .5rem;
+    width: 10%;
+    border-bottom: thin solid $base-color;
+  }
+}
+
+.header__sub-title {
+  font: {
+    size: .9rem;
+    weight: 200;
+  }
+}
+
+/* ----- Setup Shop ----- */
+.dotnav {
+  padding: 0;
+  margin: 2.3rem 0 0;
+  list-style: none;
+}
+
+.dotnav__dot {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.28rem;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  outline: none;
+  text-align: center;
+  font-size: .80rem;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+
+.dotnav__dot > a {
+  color: #e8e8e8;
+}
+
+.dotnav__dot--active {
+  background-color: $tertiary-color;
+}
+
+.dotnav__dot--active > a {
+  color: #ffffff;
+}
+
+.dotnav__dot--complete {
+  background-color: #009688;
+}
+
+.dotnav__dot--complete > a {
+  color: #009688;
+}
+
+.dotnav__dot--skipped {
+  background-color: $secondary-color;
+}
+
+.dotnav__dot--skipped > a {
+  color: $secondary-color;
+}
+
+/* ----- Day & Time ----- */
+.day__wrapper {
+}
+
+.day__wrapper--day {
+  background-color: #EBEBEB;
+  border-radius: 3px;
+}
+
+.day__wrapper--day--active {
+  background-color: $primary-color;
+  color: $white;
+}
+
+.day__wrapper--day-input {
+}
+
+/* ----- Places ----- */
+.company__box__wrapper {
+  // height: calc(100vh - 52.9375px);
+  // top: calc(100vh - 52.9375px);
+  // position: absolute;
+  // z-index: 500;
+}
+
+.company__box__body {  
+}
+
+.company__box {
+  border: thin solid #e8e8e8;
+  padding: 10px;
+  margin-bottom: 2px;
+}
+.company__box__stats {
+  border: thin solid #e8e8e8;
+  padding: 10px;
+  font-size: .90rem;
+}
+
+.company__information { 
+}
+
+.company__avatar {
+  width: 90px;
+  height: 90px;
+}
+
+.company__title,
+.company__location,
+.company__ratings {
+  margin: 0;
+  padding: 0;
+}
+
+.company__title {
+  font-size: 1.2rem;
+  color: $primary-color;
+}
+
+.company__location {
+  font-size: .80rem;
+}
+
+.company__time { font-size: 90%; }
+
+.company-box__filter-overlay,
+.company-box__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  // height: calc(100vh - 52.9375px);
+}
+
+.company-box__filter-overlay {
+  z-index: 550;
+  display: none;
+}
+
+/* ----- Service ----- */
+.service_wrapper {
+}
+
+.service__header {
+}
+
+.service__body {
+}
+
+.service__box {
+}
+
+.service__main__title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.service__items {
+  width: 100%;
+}
+
+.service__item {
+  background-color: #e8e8e8;
+  padding: 10px;
+  width: 49%;
+  // border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.service__information {
+  .service__title {
+    margin: 0 0 .4rem;
+    padding: 0;
+    font-size: .95rem;
+  }
+  .service__meta {
+    .service__price {}
+    .service__time {}
+  }
+  .service__actions {}
+}

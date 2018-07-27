@@ -1,0 +1,28 @@
+/*
+*   Filename: _gallery.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+.gallery__wrapper {
+}
+
+.gallery { 
+  border: thin solid #e8e8e8;
+}
+
+.gallery__items {
+  margin: 0;
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%;
+}
+.gallery__item {
+  list-style: none;
+  margin-right: 10px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

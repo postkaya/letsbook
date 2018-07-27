@@ -1,0 +1,46 @@
+<% provide(:title, "Join Us") %>
+<div class="wrapper">
+  <div class="form-registration-wrapper">
+    <div class="form-registration-wrapper__header">
+      <h3 class="text-center">letsbook</h3>
+      <p class="text-center">
+        Register with us, it takes less than a minute. If you already have an account <%= link_to("login here", new_user_session_path) %>.
+      </p>
+    </div>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class="form-registration-wrapper__body">
+      <%= f.error_notification %>
+      <div class="form-row">
+        <%= f.input :first_name, required: true, placeholder: 'First Name', error: "I'm sure you have a first name", wrapper_html: { class: 'col' }, input_html: { class: ("is-invalid" if resource.errors[:first_name].any?) } %>
+
+        <%= f.input :last_name, required: true, placeholder: 'Last Name', error: "Really! I'm sure you have a last name", wrapper_html: { class: 'col' }, input_html: { class: ("is-invalid" if resource.errors[:last_name].any?) } %>
+      </div>
+
+      <%= f.input :email, required: true,placeholder: 'Email Address', input_html: { class: ("is-invalid" if resource.errors[:email].any?) } %>
+
+      <%= f.input :phone, id: 'phone',placeholder: 'Phone Number' %>
+      <div class="form-row">
+        <%= f.input :password, required: true,placeholder: 'Password', wrapper_html: { class: 'col' }, input_html: { class: ("is-invalid" if resource.errors[:password].any?) } %>
+
+        <%= f.input :password_confirmation, required: true, placeholder: 'Password Again', wrapper_html: { class: 'col' }, input_html: { class: ("is-invalid" if resource.errors[:password_confirmation].any?) } %>
+      </div>
+
+     <!--  <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</small> -->
+    </div>
+    <div class="form-registration-wrapper__footer d-flex justify-content-between">
+      <button type="submit" class="">
+      Create Account
+      <!-- <%= open_iconic 'icon ic-white', :account_login %> -->
+      </button>
+    </div>
+    <% end %>
+
+   <!--  <div class="mt-3">
+      <p class="text-center">
+        <%= image_tag('business.png', width: '32px', height: '32px') %>
+        <span>Setup a business account? <%= link_to("Get started now", pages_create_path) %></span>
+      </p>
+    </div> -->
+  </div>
+</div>

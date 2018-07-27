@@ -1,0 +1,21 @@
+/*
+*   Filename: _accordoin.scss
+*   Author: Joseph Akitoye
+*   Email: josephakitoye@gmail.com
+*   Website: https://www.letsbook.com
+*   Copyright 2017. All Rights Reserved
+*/
+
+.c-offcanvas--right {
+  @media(min-width: 1200px) {
+    // width: 25em;
+  }
+}
+
+.js-offcanvas { height: 100vh;}
+
+.js-offcanvas-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}

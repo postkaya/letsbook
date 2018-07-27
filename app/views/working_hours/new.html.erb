@@ -1,0 +1,58 @@
+<% provide(:title, "Working hours") %>
+
+<%= render 'providers/shared/breadcrumb' %>
+
+<!-- <%= debug(params) if Rails.env.development? %> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 ml-auto mr-auto">
+            <div class="">
+                <div class="header">
+                    <h2 class="header__title">Work Hours</h2>
+                    <h4 class="header__sub-title">
+                        Give us more information about your work and the services you render. Tell us when you are available so your potential clients can book with you.</a>
+                    </h4>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <%= form_tag provider_working_hours_path do %>
+                            <div class="day__wrapper d-flex flex-column">
+                                <% @days.each do |day| %>
+                                    <div class="day__wrapper--day d-flex align-items-center justify-content-center mb-1 p-2">
+                                        <div class="day__wrapper--day-input mr-auto">
+                                            <label for="<%= day %>">
+                                                <input type="checkbox" name="day" value="working_hour[<%= day %>]" id="<%= day %>" onchange="toggleDayInput(this)">
+                                                <%= day.capitalize %>
+                                            </label>
+                                        </div>
+
+                                        <div class="day__wrapper--day-time d-flex justify-content-between">
+                                            <input type="text" name="working_hour[<%= day %>][time_from]" disabled class="form-control timepicker text-center mr-2 <%= day %>">
+                                            <input type="text" name="working_hour[<%= day %>][time_to]" disabled class="form-control timepicker text-center mr-2 <%= day %>">
+                                        </div>
+                                    </div>
+                                 <% end %>
+                                 <div class="d-flex mt-2 justify-content-between align-items-center">
+                                     <button type="submit" class="">
+                                     Finish
+                                     <%= open_iconic 'icon ic-white', :account_login %>
+                                     </button>
+                                 </div>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleDayInput(el) {
+        var timeInputs = $('input.'+ $(el).attr('id'));
+        $(timeInputs).attr('disabled', !el.checked);
+        $(el).parent().parent().parent().toggleClass('day__wrapper--day--active');
+    }
+</script>
